@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vehicles | AutoWorld - Catàleg</title>
+
+    <meta name="description" content="Consulta el catàleg de vehicles d'AutoWorld.">
+    <meta name="author" content="Eloi Amat">
+    <meta name="keywords" content="cotxes, vehicles, BMW, Audi, Mercedes">
+
+    <link rel="stylesheet" href="css/estils.css">
+
+    <script src="components/rellotge.js" defer></script>
+    <script src="components/catalogo.js" defer></script>
+
+</head>
+
+<body onload="iniciarRellotge()">
+
+    <header id="capcelera">
+
+        <a href="index.html">
+            <img id="logo" src="./img/logo.png" alt="Logo AutoWorld">
+        </a>
+
+        <div id="rellotge">
+            Temps a la pàgina: 0 segons
+        </div>
+
+        <nav>
+            <a href="index.html">Inici</a>
+            <a href="vehiculos.html" class="actiu">Vehicles</a>
+            <a href="contacto.html">Demanar informació</a>
+        </nav>
+
+      
+    </header>
+
+
+    <main>
+
+        <section id="catalogo">
+
+            <h1>El nostre catàleg</h1>
+
+            <p>Descobreix els vehicles disponibles a AutoWorld.</p>
+
+
+            <div class="imatge-gran">
+
+                <img id="imatgePrincipal" src="./img/bmw.jpeg"
+                    alt="Vehicle seleccionat">
+
+            </div>
+
+    
+
+            <div class="galeria">
+
+                <img src="./img/bmw.jpeg" alt="BMW"
+                    onclick="canviarImatge(this)">
+
+                <img src="./img/audi.jpg" alt="Audi"
+                    onclick="canviarImatge(this)">
+
+                <img src="./img/mercedes.jpeg" alt="Mercedes"
+                    onclick="canviarImatge(this)">
+
+                <img src="./img/cotxe4.jpg" alt="Vehicle 4"
+                    onclick="canviarImatge(this)">
+
+                <img src="./img/cotxe5.jpg" alt="Vehicle 5"
+                    onclick="canviarImatge(this)">
+
+                <img src="./img/cotxe6.jpg" alt="Vehicle 6"
+                    onclick="canviarImatge(this)">
+
+            </div>
+
+        </section>
+
+
+        <section id="seccioInfo"
+            onmouseover="mostrarText()"
+            onmouseout="amagarText()">
+
+            <h2>Per què escollir AutoWorld?</h2>
+
+            <p>Descobreix els avantatges de comprar amb nosaltres.</p>
+
+            <p id="textOcult" style="display: none;">
+                A AutoWorld oferim vehicles seleccionats,
+                atenció personalitzada i assessorament
+                per ajudar-te a trobar el cotxe ideal.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer id="footer">
+
+        <p>
+            © 2026 AutoWorld | Activitat realitzada per
+            <strong>Eloi Amat</strong>
+        </p>
+
+    </footer>
+
+
+
+    <script>
+
+        function mostrarText() {
+
+            document.getElementById("textOcult").style.display = "block";
+
+            document.getElementById("seccioInfo").style.backgroundColor = "#e63946";
+
+            document.getElementById("seccioInfo").style.color = "white";
+
+        }
+
+
+        function amagarText() {
+
+            document.getElementById("textOcult").style.display = "none";
+
+            document.getElementById("seccioInfo").style.backgroundColor = "#222222";
+
+            document.getElementById("seccioInfo").style.color = "white";
+
+        }
+
+    </script>
+
+</body>
+</html>
